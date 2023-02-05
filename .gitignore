@@ -1,1 +1,9 @@
-.idea
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven
+target/
+log/
