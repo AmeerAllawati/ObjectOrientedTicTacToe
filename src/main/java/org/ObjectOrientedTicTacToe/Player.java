@@ -7,6 +7,7 @@ public class Player {
     private Symbol playerSymbol = new Symbol();
     private static int playerNumber = 0;
     private boolean inTurn;
+    private boolean bot;
 
     Player() {
         this.playerNumber++;
@@ -63,5 +64,17 @@ public class Player {
 
     public void setInTurn(boolean inTurn) {
         this.inTurn = inTurn;
+    }
+
+    public boolean isBot() {
+        return bot;
+    }
+
+    public void setBot(boolean bot) {
+        this.bot = bot;
+    }
+
+    public void setPlayerSymbol(char symbolChar) {
+        this.playerSymbol.setSymbol(symbolChar);
     }
 }
