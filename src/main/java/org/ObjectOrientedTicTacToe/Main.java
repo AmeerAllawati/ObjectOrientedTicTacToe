@@ -1,5 +1,7 @@
 package org.ObjectOrientedTicTacToe;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         FileManager gameFile = new FileManager();
@@ -18,8 +20,17 @@ public class Main {
                 playerInTurn = player2;
             }
         } else {
+            System.out.println("Do you want to play against a bot? ");
+            Scanner sc = new Scanner(System.in);
+            String playingAgainstBot = sc.nextLine();
             player1 = new Player(false);
-            player2 = new Player(false);
+            if(playingAgainstBot.contains("yes")) {
+                player2 = new Bot();
+                player2.setBot(true);
+            } else {
+                player2 = new Player(false);
+            }
+
             playerInTurn = player1;
         }
 
